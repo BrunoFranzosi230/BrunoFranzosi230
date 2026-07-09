@@ -1,4 +1,4 @@
-<h1 align="center">Olá, eu sou o Bruno Rafa! 👋</h1>
+<h1 align="center">Olá, eu sou o Bruno 👋</h1>
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=2E97F7&center=true&vCenter=true&width=500&lines=Desenvolvedor+Full+Stack;Apaixonado+por+JavaScript+%26+TypeScript;Sempre+aprendendo+algo+novo!" alt="Typing SVG" />
