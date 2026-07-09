@@ -22,7 +22,6 @@
   <a href="https://www.linkedin.com/in/bruno-franzosi-0655b3272/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
   
 </div>
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/BrunoFranzosi230/BrunoFranzosi230/output/github-contribution-grid-snake.svg" alt="snake animation" />
 </p>
