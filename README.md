@@ -26,4 +26,3 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/BrunoFranzosi230/BrunoFranzosi230/output/github-contribution-grid-snake.svg" alt="snake animation" />
 </p>
----
