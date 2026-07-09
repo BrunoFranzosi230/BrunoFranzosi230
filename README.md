@@ -26,21 +26,6 @@
 
 ---
 
-### 📊 Estatísticas do GitHub
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=SEU_USUARIO&show_icons=true&count_private=true&theme=tokyonight&hide_border=true" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SEU_USUARIO&layout=compact&theme=tokyonight&hide_border=true" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=SEU_USUARIO&theme=tokyonight&hide_border=true" alt="streak stats" />
-</p>
-
-> 💡 O total de commits já aparece no card de estatísticas acima (campo "Total Commits"). Pra contar também os commits privados, use `&count_private=true` como já está no link.
-
----
-
 ### 🐍 Minha cobrinha comendo os commits
 
 <p align="center">
@@ -49,25 +34,5 @@
 
 ---
 
-### 🏆 Troféus
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=SEU_USUARIO&theme=tokyonight&no-frame=true&row=1&column=7" />
-</p>
-
----
-
 ### 📫 Como me encontrar
-
-<div align="center">
-  <a href="mailto:brunofranzosi91@gmail.com">
-    <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="https://www.linkedin.com/in/bruno-franzosi-0655b3272/" target="_blank">
-    <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-</div>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=2E97F7&height=100&section=footer" />
-</p>
+aa
