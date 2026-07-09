@@ -17,6 +17,7 @@
 </div>
 
 ### 📊 Estatísticas do GitHub
+
 <p align="center">
   <img height="165" src="https://bruno-franzosi230.vercel.app/api?username=BrunoFranzosi230&show_icons=true&count_private=true&theme=tokyonight&hide_border=true" />
   <img height="165" src="https://bruno-franzosi230.vercel.app/api/top-langs/?username=BrunoFranzosi230&layout=compact&theme=tokyonight&hide_border=true" />
