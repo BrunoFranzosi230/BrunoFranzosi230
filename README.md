@@ -1,11 +1,11 @@
 <h1 align="center">Olá, eu sou o Bruno Franzosi! 👋</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=2E97F7&center=true&vCenter=true&width=500&lines=Desenvolvedor+Full+Stack;Sempre+aprendendo+algo+novo!" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=2E97F7&center=true&vCenter=true&width=500&lines=Desenvolvedor;Sempre+aprendendo+algo+novo!" alt="Typing SVG" />
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=SEU_USUARIO&label=Visualizações+no+perfil&color=2E97F7&style=flat" alt="visitor badge" />
+  <img src="https://komarev.com/ghpvc/?username=BrunoFranzosi230&label=Visualizações+no+perfil&color=2E97F7&style=flat" alt="visitor badge" />
 </p>
 
 ---
