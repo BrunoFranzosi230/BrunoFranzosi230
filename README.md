@@ -9,6 +9,15 @@
 </p>
 
 ---
+### STATS:
+
+<p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=BrunoFranzosi230&show_icons=true&count_private=true&theme=tokyonight&hide_border=true" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=BrunoFranzosi230&layout=compact&theme=tokyonight&hide_border=true" />
+</p>
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=BrunoFranzosi230&theme=tokyonight&hide_border=true" alt="streak stats" />
+</p>
 
 ### 🚀 Tecnologias que eu uso
 
@@ -28,6 +37,7 @@
 ### 📫 Como me encontrar
 <div> 
   <a href = "mailto:brunofranzosi91@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+  <a href="https://instagram.com/brunof230" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
   <a href="https://www.linkedin.com/in/bruno-franzosi-0655b3272/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
   
 </div>
