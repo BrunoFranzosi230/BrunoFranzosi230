@@ -16,6 +16,12 @@
   <img align="center" alt="Git" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" />
 </div>
 ---
+### 📊 Estatísticas do GitHub
+<p align="center">
+  <img height="165" src="https://bruno-franzosi230.vercel.app/api?username=BrunoFranzosi230&show_icons=true&count_private=true&theme=tokyonight&hide_border=true" />
+  <img height="165" src="https://bruno-franzosi230.vercel.app/api/top-langs/?username=BrunoFranzosi230&layout=compact&theme=tokyonight&hide_border=true" />
+</p>
+---
 ### 📫 Como me encontrar
 <div> 
   <a href = "mailto:brunofranzosi91@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
