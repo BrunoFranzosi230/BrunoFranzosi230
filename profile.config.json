@@ -12,7 +12,7 @@
   "typing": [
     "$ whoami",
     "> Olá, eu sou o Bruno Franzosi!",
-    "> Desenvolvedor full stack // segurança & pentest",
+    "> Desenvolvedor full stack",
     "> Sempre aprendendo algo novo..."
   ],
   "stack": ["PYTHON", "TYPESCRIPT", "JAVASCRIPT", "REACT", "NODE.JS", "C#", ".NET / WPF", "HTML5", "CSS3", "SQL", "GIT", "PENTEST"],
