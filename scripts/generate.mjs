@@ -1,6 +1,7 @@
 // Gera os SVGs do README (banner, stack, diagnóstico, atividade).
 // Uso: GH_TOKEN=xxx node scripts/generate.mjs   (sem token -> dados de exemplo)
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, unlinkSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -503,14 +504,28 @@ function footer() {
 }
 
 // ---------- run ----------
+// Cada SVG é salvo com um hash do conteúdo no nome (ex.: banner-1a2b3c4d.svg).
+// Assim a URL muda sempre que o conteúdo muda e o cache do GitHub nunca serve versão velha.
 const data = await fetchData();
 const st = streaks(data.days);
-writeFileSync(join(OUT, "banner.svg"), banner());
-writeFileSync(join(OUT, "stack.svg"), stack());
-writeFileSync(join(OUT, "diagnostics.svg"), diagnostics(data, st));
-writeFileSync(join(OUT, "activity.svg"), activity(data));
-writeFileSync(join(OUT, "whoami.svg"), whoami());
-writeFileSync(join(OUT, "comms.svg"), commsHeader());
-writeFileSync(join(OUT, "footer.svg"), footer());
-for (const c of cfg.contacts) writeFileSync(join(OUT, `link-${c.kind}.svg`), button(c.kind, c.label, c.sub));
+const out = {
+  banner: banner(),
+  stack: stack(),
+  diagnostics: diagnostics(data, st),
+  activity: activity(data),
+  whoami: whoami(),
+  comms: commsHeader(),
+  footer: footer(),
+};
+for (const c of cfg.contacts) out[`link-${c.kind}`] = button(c.kind, c.label, c.sub);
+
+for (const f of readdirSync(OUT)) if (f.endsWith(".svg")) unlinkSync(join(OUT, f));
+const names = {};
+for (const [k, v] of Object.entries(out)) {
+  const h = createHash("sha1").update(v).digest("hex").slice(0, 8);
+  names[k] = `./assets/${k}-${h}.svg`;
+  writeFileSync(join(ROOT, names[k]), v);
+}
+const tpl = readFileSync(join(ROOT, "README.template.md"), "utf8");
+writeFileSync(join(ROOT, "README.md"), tpl.replace(/\{\{([a-z-]+)\}\}/g, (m, k) => names[k] || m));
 console.log("SVGs gerados em assets/", process.env.GH_TOKEN || process.env.GITHUB_TOKEN ? "(dados reais)" : "(dados de exemplo)");
