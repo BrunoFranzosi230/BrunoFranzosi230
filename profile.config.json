@@ -1,0 +1,13 @@
+{
+  "username": "BrunoFranzosi230",
+  "handle": "BRUNO",
+  "katakana": "ブルーノ・フランゾシ",
+  "subtitle": "NETRUNNER OPERATIONS",
+  "ident": "BRUNO FRANZOSI",
+  "class": "SOFTWARE DEVELOPER",
+  "spec": "FULL STACK // SECURITY",
+  "node": "BRASIL // UTC-03",
+  "timezone": "America/Sao_Paulo",
+  "tzLabel": "BRT",
+  "stack": ["PYTHON", "TYPESCRIPT", "JAVASCRIPT", "C#", ".NET / WPF", "NODE.JS", "HTML5", "CSS3", "REST APIS", "SQL", "GIT", "PENTEST"]
+}
