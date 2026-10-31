@@ -4,7 +4,7 @@
 
 <br/><br/>
 
-<img src="./assets/whoami-49947579.svg" width="100%" alt="Olá, eu sou o Bruno Franzosi! Desenvolvedor, sempre aprendendo algo novo." />
+<img src="./assets/whoami-905f5959.svg" width="100%" alt="Olá, eu sou o Bruno Franzosi! Desenvolvedor, sempre aprendendo algo novo." />
 
 <br/><br/>
 
@@ -20,7 +20,7 @@
 
 <br/><br/>
 
-<img src="./assets/diagnostics-9ae77c31.svg" width="100%" alt="System diagnostics" />
+<img src="./assets/diagnostics-5a234718.svg" width="100%" alt="System diagnostics" />
 
 <br/><br/>
 
