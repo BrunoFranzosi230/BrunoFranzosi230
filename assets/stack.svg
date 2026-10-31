@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="166" viewBox="0 0 1000 166">
 <defs>
   <pattern id="hstripe" width="6" height="4" patternUnits="userSpaceOnUse">
-    <rect width="6" height="2" fill="#00ff88" opacity=".85"/>
+    <rect width="6" height="2" fill="#00f0ff" opacity=".85"/>
   </pattern>
   <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-    <path d="M20 0H0V20" fill="none" stroke="#00ff88" stroke-opacity=".05"/>
+    <path d="M20 0H0V20" fill="none" stroke="#00f0ff" stroke-opacity=".05"/>
   </pattern>
   <pattern id="scan" width="4" height="3" patternUnits="userSpaceOnUse">
     <rect width="4" height="1" fill="#000" opacity=".35"/>
@@ -32,69 +32,69 @@
   .pulse{animation:pulse 2.4s ease-in-out infinite}
   @media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
 
-  <rect x="2" y="6" width="5" height="24" fill="#00ff88" filter="url(#softglow)"/>
-  <text x="18" y="26" class="d" font-size="21" letter-spacing="2.5" fill="#00ff88" filter="url(#softglow)">INSTALLED CYBERWARE</text>
-  <text x="998" y="24" text-anchor="end" font-size="10.5" letter-spacing="1.5" fill="#00c46a">STACK // LOADOUT</text>
-  <line x1="0" y1="38" x2="1000" y2="38" stroke="#0f6b3e" stroke-width="1"/>
-  <line x1="0" y1="38" x2="160" y2="38" stroke="#00ff88" stroke-width="2"/><g>
-      <polygon points="0.5,50.5 147.83333333333334,50.5 157.83333333333334,60.5 157.83333333333334,95.5 10.5,95.5 0.5,85.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
-      <text x="11" y="66" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_01</text>
-      <text x="11" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">PYTHON</text>
+  <rect x="2" y="6" width="5" height="24" fill="#00f0ff" filter="url(#softglow)"/>
+  <text x="18" y="26" class="d" font-size="21" letter-spacing="2.5" fill="#00f0ff" filter="url(#softglow)">INSTALLED CYBERWARE</text>
+  <text x="998" y="24" text-anchor="end" font-size="10.5" letter-spacing="1.5" fill="#00b8d4">STACK // LOADOUT</text>
+  <line x1="0" y1="38" x2="1000" y2="38" stroke="#0e5e6e" stroke-width="1"/>
+  <line x1="0" y1="38" x2="160" y2="38" stroke="#00f0ff" stroke-width="2"/><g>
+      <polygon points="0.5,50.5 147.83333333333334,50.5 157.83333333333334,60.5 157.83333333333334,95.5 10.5,95.5 0.5,85.5" fill="#031216" stroke="#00b8d4" stroke-width="1"/>
+      <text x="11" y="66" font-size="8.5" fill="#6cc8d6" letter-spacing="1">MOD_01</text>
+      <text x="11" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00f0ff">PYTHON</text>
       
     </g><g>
-      <polygon points="168.83333333333334,50.5 316.1666666666667,50.5 326.1666666666667,60.5 326.1666666666667,95.5 178.83333333333334,95.5 168.83333333333334,85.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
-      <text x="179.33333333333334" y="66" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_02</text>
-      <text x="179.33333333333334" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">TYPESCRIPT</text>
-      <rect x="300.6666666666667" y="56" width="12" height="3" fill="#00ff88" class="pulse"/>
+      <polygon points="168.83333333333334,50.5 316.1666666666667,50.5 326.1666666666667,60.5 326.1666666666667,95.5 178.83333333333334,95.5 168.83333333333334,85.5" fill="#031216" stroke="#00b8d4" stroke-width="1"/>
+      <text x="179.33333333333334" y="66" font-size="8.5" fill="#6cc8d6" letter-spacing="1">MOD_02</text>
+      <text x="179.33333333333334" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00f0ff">TYPESCRIPT</text>
+      <rect x="300.6666666666667" y="56" width="12" height="3" fill="#00f0ff" class="pulse"/>
     </g><g>
-      <polygon points="337.1666666666667,50.5 484.5,50.5 494.5,60.5 494.5,95.5 347.1666666666667,95.5 337.1666666666667,85.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
-      <text x="347.6666666666667" y="66" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_03</text>
-      <text x="347.6666666666667" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">JAVASCRIPT</text>
-      <rect x="469" y="56" width="12" height="3" fill="#00ff88" class="pulse"/>
+      <polygon points="337.1666666666667,50.5 484.5,50.5 494.5,60.5 494.5,95.5 347.1666666666667,95.5 337.1666666666667,85.5" fill="#031216" stroke="#00b8d4" stroke-width="1"/>
+      <text x="347.6666666666667" y="66" font-size="8.5" fill="#6cc8d6" letter-spacing="1">MOD_03</text>
+      <text x="347.6666666666667" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00f0ff">JAVASCRIPT</text>
+      <rect x="469" y="56" width="12" height="3" fill="#00f0ff" class="pulse"/>
     </g><g>
-      <polygon points="505.5,50.5 652.8333333333334,50.5 662.8333333333334,60.5 662.8333333333334,95.5 515.5,95.5 505.5,85.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
-      <text x="516" y="66" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_04</text>
-      <text x="516" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">REACT</text>
-      <rect x="637.3333333333334" y="56" width="12" height="3" fill="#00ff88" class="pulse"/>
+      <polygon points="505.5,50.5 652.8333333333334,50.5 662.8333333333334,60.5 662.8333333333334,95.5 515.5,95.5 505.5,85.5" fill="#031216" stroke="#00b8d4" stroke-width="1"/>
+      <text x="516" y="66" font-size="8.5" fill="#6cc8d6" letter-spacing="1">MOD_04</text>
+      <text x="516" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00f0ff">REACT</text>
+      <rect x="637.3333333333334" y="56" width="12" height="3" fill="#00f0ff" class="pulse"/>
     </g><g>
-      <polygon points="673.8333333333334,50.5 821.1666666666667,50.5 831.1666666666667,60.5 831.1666666666667,95.5 683.8333333333334,95.5 673.8333333333334,85.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
-      <text x="684.3333333333334" y="66" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_05</text>
-      <text x="684.3333333333334" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">NODE.JS</text>
+      <polygon points="673.8333333333334,50.5 821.1666666666667,50.5 831.1666666666667,60.5 831.1666666666667,95.5 683.8333333333334,95.5 673.8333333333334,85.5" fill="#031216" stroke="#00b8d4" stroke-width="1"/>
+      <text x="684.3333333333334" y="66" font-size="8.5" fill="#6cc8d6" letter-spacing="1">MOD_05</text>
+      <text x="684.3333333333334" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00f0ff">NODE.JS</text>
       
     </g><g>
-      <polygon points="842.1666666666667,50.5 989.5000000000001,50.5 999.5000000000001,60.5 999.5000000000001,95.5 852.1666666666667,95.5 842.1666666666667,85.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
-      <text x="852.6666666666667" y="66" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_06</text>
-      <text x="852.6666666666667" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">C#</text>
+      <polygon points="842.1666666666667,50.5 989.5000000000001,50.5 999.5000000000001,60.5 999.5000000000001,95.5 852.1666666666667,95.5 842.1666666666667,85.5" fill="#031216" stroke="#00b8d4" stroke-width="1"/>
+      <text x="852.6666666666667" y="66" font-size="8.5" fill="#6cc8d6" letter-spacing="1">MOD_06</text>
+      <text x="852.6666666666667" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00f0ff">C#</text>
       
     </g><g>
-      <polygon points="0.5,106.5 147.83333333333334,106.5 157.83333333333334,116.5 157.83333333333334,151.5 10.5,151.5 0.5,141.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
-      <text x="11" y="122" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_07</text>
-      <text x="11" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">.NET / WPF</text>
-      <rect x="132.33333333333334" y="112" width="12" height="3" fill="#00ff88" class="pulse"/>
+      <polygon points="0.5,106.5 147.83333333333334,106.5 157.83333333333334,116.5 157.83333333333334,151.5 10.5,151.5 0.5,141.5" fill="#031216" stroke="#00b8d4" stroke-width="1"/>
+      <text x="11" y="122" font-size="8.5" fill="#6cc8d6" letter-spacing="1">MOD_07</text>
+      <text x="11" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00f0ff">.NET / WPF</text>
+      <rect x="132.33333333333334" y="112" width="12" height="3" fill="#00f0ff" class="pulse"/>
     </g><g>
-      <polygon points="168.83333333333334,106.5 316.1666666666667,106.5 326.1666666666667,116.5 326.1666666666667,151.5 178.83333333333334,151.5 168.83333333333334,141.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
-      <text x="179.33333333333334" y="122" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_08</text>
-      <text x="179.33333333333334" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">HTML5</text>
-      <rect x="300.6666666666667" y="112" width="12" height="3" fill="#00ff88" class="pulse"/>
+      <polygon points="168.83333333333334,106.5 316.1666666666667,106.5 326.1666666666667,116.5 326.1666666666667,151.5 178.83333333333334,151.5 168.83333333333334,141.5" fill="#031216" stroke="#00b8d4" stroke-width="1"/>
+      <text x="179.33333333333334" y="122" font-size="8.5" fill="#6cc8d6" letter-spacing="1">MOD_08</text>
+      <text x="179.33333333333334" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00f0ff">HTML5</text>
+      <rect x="300.6666666666667" y="112" width="12" height="3" fill="#00f0ff" class="pulse"/>
     </g><g>
-      <polygon points="337.1666666666667,106.5 484.5,106.5 494.5,116.5 494.5,151.5 347.1666666666667,151.5 337.1666666666667,141.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
-      <text x="347.6666666666667" y="122" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_09</text>
-      <text x="347.6666666666667" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">CSS3</text>
+      <polygon points="337.1666666666667,106.5 484.5,106.5 494.5,116.5 494.5,151.5 347.1666666666667,151.5 337.1666666666667,141.5" fill="#031216" stroke="#00b8d4" stroke-width="1"/>
+      <text x="347.6666666666667" y="122" font-size="8.5" fill="#6cc8d6" letter-spacing="1">MOD_09</text>
+      <text x="347.6666666666667" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00f0ff">CSS3</text>
       
     </g><g>
-      <polygon points="505.5,106.5 652.8333333333334,106.5 662.8333333333334,116.5 662.8333333333334,151.5 515.5,151.5 505.5,141.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
-      <text x="516" y="122" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_10</text>
-      <text x="516" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">SQL</text>
+      <polygon points="505.5,106.5 652.8333333333334,106.5 662.8333333333334,116.5 662.8333333333334,151.5 515.5,151.5 505.5,141.5" fill="#031216" stroke="#00b8d4" stroke-width="1"/>
+      <text x="516" y="122" font-size="8.5" fill="#6cc8d6" letter-spacing="1">MOD_10</text>
+      <text x="516" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00f0ff">SQL</text>
       
     </g><g>
-      <polygon points="673.8333333333334,106.5 821.1666666666667,106.5 831.1666666666667,116.5 831.1666666666667,151.5 683.8333333333334,151.5 673.8333333333334,141.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
-      <text x="684.3333333333334" y="122" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_11</text>
-      <text x="684.3333333333334" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">GIT</text>
-      <rect x="805.6666666666667" y="112" width="12" height="3" fill="#00ff88" class="pulse"/>
+      <polygon points="673.8333333333334,106.5 821.1666666666667,106.5 831.1666666666667,116.5 831.1666666666667,151.5 683.8333333333334,151.5 673.8333333333334,141.5" fill="#031216" stroke="#00b8d4" stroke-width="1"/>
+      <text x="684.3333333333334" y="122" font-size="8.5" fill="#6cc8d6" letter-spacing="1">MOD_11</text>
+      <text x="684.3333333333334" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00f0ff">GIT</text>
+      <rect x="805.6666666666667" y="112" width="12" height="3" fill="#00f0ff" class="pulse"/>
     </g><g>
-      <polygon points="842.1666666666667,106.5 989.5000000000001,106.5 999.5000000000001,116.5 999.5000000000001,151.5 852.1666666666667,151.5 842.1666666666667,141.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
-      <text x="852.6666666666667" y="122" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_12</text>
-      <text x="852.6666666666667" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">PENTEST</text>
-      <rect x="974.0000000000001" y="112" width="12" height="3" fill="#00ff88" class="pulse"/>
+      <polygon points="842.1666666666667,106.5 989.5000000000001,106.5 999.5000000000001,116.5 999.5000000000001,151.5 852.1666666666667,151.5 842.1666666666667,141.5" fill="#031216" stroke="#00b8d4" stroke-width="1"/>
+      <text x="852.6666666666667" y="122" font-size="8.5" fill="#6cc8d6" letter-spacing="1">MOD_12</text>
+      <text x="852.6666666666667" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00f0ff">PENTEST</text>
+      <rect x="974.0000000000001" y="112" width="12" height="3" fill="#00f0ff" class="pulse"/>
     </g>
 </svg>

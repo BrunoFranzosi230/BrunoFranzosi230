@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="64" viewBox="0 0 300 64">
 <defs>
   <pattern id="hstripe" width="6" height="4" patternUnits="userSpaceOnUse">
-    <rect width="6" height="2" fill="#00ff88" opacity=".85"/>
+    <rect width="6" height="2" fill="#00f0ff" opacity=".85"/>
   </pattern>
   <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-    <path d="M20 0H0V20" fill="none" stroke="#00ff88" stroke-opacity=".05"/>
+    <path d="M20 0H0V20" fill="none" stroke="#00f0ff" stroke-opacity=".05"/>
   </pattern>
   <pattern id="scan" width="4" height="3" patternUnits="userSpaceOnUse">
     <rect width="4" height="1" fill="#000" opacity=".35"/>
@@ -32,14 +32,14 @@
   .pulse{animation:pulse 2.4s ease-in-out infinite}
   @media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
 
-  <polygon points="15,1 299,1 299,49 285,63 1,63 1,15" fill="#03100a" stroke="#00ff88" stroke-width="1.5"/>
-  <polygon points="16,5 295,5 295,48 284,59 5,59 5,16" fill="none" stroke="#0d4a2c"/>
+  <polygon points="15,1 299,1 299,49 285,63 1,63 1,15" fill="#031216" stroke="#00f0ff" stroke-width="1.5"/>
+  <polygon points="16,5 295,5 295,48 284,59 5,59 5,16" fill="none" stroke="#0b3f4a"/>
   <rect x="1" y="1" width="298" height="62" fill="url(#hstripe)" opacity=".05"/>
-  <g filter="url(#softglow)"><rect x="18" y="19" width="36" height="26" rx="2" fill="none" stroke="#00ff88" stroke-width="2"/>
-      <path d="M19 21 L36 34 L53 21" fill="none" stroke="#00ff88" stroke-width="2"/></g>
-  <line x1="68" y1="14" x2="68" y2="50" stroke="#0f6b3e"/>
-  <text x="82" y="30" class="d" font-size="16" letter-spacing="2.5" fill="#00ff88">GMAIL</text>
-  <text x="82" y="47" font-size="10" letter-spacing=".8" fill="#6fcf9c">brunofranzosi91@gmail.com</text>
-  <text x="278" y="38" text-anchor="end" font-size="16" fill="#00ff88" class="pulse">&gt;&gt;</text>
+  <g filter="url(#softglow)"><rect x="18" y="19" width="36" height="26" rx="2" fill="none" stroke="#00f0ff" stroke-width="2"/>
+      <path d="M19 21 L36 34 L53 21" fill="none" stroke="#00f0ff" stroke-width="2"/></g>
+  <line x1="68" y1="14" x2="68" y2="50" stroke="#0e5e6e"/>
+  <text x="82" y="30" class="d" font-size="16" letter-spacing="2.5" fill="#00f0ff">GMAIL</text>
+  <text x="82" y="47" font-size="10" letter-spacing=".8" fill="#6cc8d6">brunofranzosi91@gmail.com</text>
+  <text x="278" y="38" text-anchor="end" font-size="16" fill="#00f0ff" class="pulse">&gt;&gt;</text>
   
 </svg>
