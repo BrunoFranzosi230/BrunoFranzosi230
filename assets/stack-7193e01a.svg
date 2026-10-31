@@ -94,7 +94,7 @@
     </g><g>
       <polygon points="842.1666666666667,106.5 989.5000000000001,106.5 999.5000000000001,116.5 999.5000000000001,151.5 852.1666666666667,151.5 842.1666666666667,141.5" fill="#031216" stroke="#00b8d4" stroke-width="1"/>
       <text x="852.6666666666667" y="122" font-size="8.5" fill="#6cc8d6" letter-spacing="1">MOD_12</text>
-      <text x="852.6666666666667" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00f0ff">PENTEST</text>
+      <text x="852.6666666666667" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00f0ff">DOCKER</text>
       <rect x="974.0000000000001" y="112" width="12" height="3" fill="#00f0ff" class="pulse"/>
     </g>
 </svg>

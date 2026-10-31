@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/banner-d6eac9d3.svg" width="100%" alt="Bruno Franzosi — Netrunner Operations" />
+<img src="./assets/banner-c0d09682.svg" width="100%" alt="Bruno Franzosi — Netrunner Operations" />
 
 <br/><br/>
 
@@ -16,11 +16,11 @@
 
 <br/><br/>
 
-<img src="./assets/stack-3941cc42.svg" width="100%" alt="Stack: Python, TypeScript, JavaScript, React, Node.js, C#, .NET/WPF, HTML5, CSS3, SQL, Git, Pentest" />
+<img src="./assets/stack-7193e01a.svg" width="100%" alt="Stack: Python, TypeScript, JavaScript, React, Node.js, C#, .NET/WPF, HTML5, CSS3, SQL, Git, Pentest" />
 
 <br/><br/>
 
-<img src="./assets/diagnostics-5a234718.svg" width="100%" alt="System diagnostics" />
+<img src="./assets/diagnostics-8a6adec9.svg" width="100%" alt="System diagnostics" />
 
 <br/><br/>
 
