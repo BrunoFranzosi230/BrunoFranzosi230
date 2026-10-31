@@ -63,7 +63,7 @@
       <text x="472" y="250" text-anchor="end" font-size="10.5" letter-spacing=".8" fill="#00ff88" >6 DAYS</text>
   <line x1="18" y1="270" x2="472" y2="270" stroke="#0f6b3e"/>
   <text x="20" y="288" font-size="10.5" letter-spacing="1.5" fill="#00ff88">OVERALL SYSTEM STATUS: <tspan fill="#d6ffea" font-weight="700">NOMINAL</tspan><tspan class="blink" fill="#00ff88"> █</tspan></text>
-  <text x="472" y="302" text-anchor="end" font-size="8.5" letter-spacing="1" fill="#00c46a">LAST SYNC 2026-10-30 22:13 BRT</text>
+  <text x="472" y="302" text-anchor="end" font-size="8.5" letter-spacing="1" fill="#00c46a">LAST SYNC 2026-10-30 22:14 BRT</text>
   
     <polygon points="524,48 1000,48 1000,296 986,310 510,310 510,62" fill="#03100a" stroke="#00c46a" stroke-width="1.2"/>
     <path d="M966 44H1004V78" fill="none" stroke="#00ff88" stroke-width="1.5"/>
