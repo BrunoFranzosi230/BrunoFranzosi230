@@ -5,7 +5,7 @@
   "subtitle": "NETRUNNER OPERATIONS",
   "ident": "BRUNO FRANZOSI",
   "class": "SOFTWARE DEVELOPER",
-  "spec": "FULL STACK // SECURITY",
+  "spec": "FULL STACK // WEB & DESKTOP",
   "node": "BRASIL // UTC-03",
   "timezone": "America/Sao_Paulo",
   "tzLabel": "BRT",
@@ -15,7 +15,7 @@
     "> Desenvolvedor full stack",
     "> Sempre aprendendo algo novo..."
   ],
-  "stack": ["PYTHON", "TYPESCRIPT", "JAVASCRIPT", "REACT", "NODE.JS", "C#", ".NET / WPF", "HTML5", "CSS3", "SQL", "GIT", "PENTEST"],
+  "stack": ["PYTHON", "TYPESCRIPT", "JAVASCRIPT", "REACT", "NODE.JS", "C#", ".NET / WPF", "HTML5", "CSS3", "SQL", "GIT", "DOCKER"],
   "contacts": [
     { "kind": "linkedin", "label": "LINKEDIN", "sub": "/in/bruno-franzosi", "url": "https://www.linkedin.com/in/bruno-franzosi-0655b3272/" },
     { "kind": "gmail", "label": "GMAIL", "sub": "brunofranzosi91@gmail.com", "url": "mailto:brunofranzosi91@gmail.com" },
