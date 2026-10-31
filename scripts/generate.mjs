@@ -352,10 +352,10 @@ function snakeGrid(d, ox, oy) {
 
   // rótulos de mês e dia
   const mNames = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
-  let months = "", lastM = -1;
+  let months = "", lastM = -1, lastCol = -9;
   cells.forEach((x) => {
     const m = +x.date.slice(5, 7) - 1;
-    if (x.row === 0 && m !== lastM && x.col < cols - 2) { lastM = m; months += `<text x="${ox + x.col * ST}" y="${oy - 8}" font-size="9" fill="${C.txt}">${mNames[m]}</text>`; }
+    if (x.row === 0 && m !== lastM && x.col < cols - 2) { lastM = m; if (x.col - lastCol < 3) return; lastCol = x.col; months += `<text x="${ox + x.col * ST}" y="${oy - 8}" font-size="9" fill="${C.txt}">${mNames[m]}</text>`; }
   });
   const wd = [[1, "SEG"], [3, "QUA"], [5, "SEX"]].map(([r, t]) => `<text x="${ox - 8}" y="${cyp(r) + 3}" text-anchor="end" font-size="9" fill="${C.txt}">${t}</text>`).join("");
   const legend = LV.map((c, i) => `<rect x="${ox + cols * ST - 5 * ST + i * ST - 4}" y="${oy + 7 * ST + 8}" width="${CS}" height="${CS}" rx="1.5" fill="${c}"/>`).join("");
