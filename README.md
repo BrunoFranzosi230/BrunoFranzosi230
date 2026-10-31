@@ -20,7 +20,7 @@
 
 <br/><br/>
 
-<img src="./assets/diagnostics-8a6adec9.svg" width="100%" alt="System diagnostics" />
+<img src="./assets/diagnostics-06106496.svg" width="100%" alt="System diagnostics" />
 
 <br/><br/>
 
