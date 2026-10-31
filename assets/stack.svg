@@ -54,32 +54,32 @@
     </g><g>
       <polygon points="505.5,50.5 652.8333333333334,50.5 662.8333333333334,60.5 662.8333333333334,95.5 515.5,95.5 505.5,85.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
       <text x="516" y="66" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_04</text>
-      <text x="516" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">C#</text>
+      <text x="516" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">REACT</text>
       <rect x="637.3333333333334" y="56" width="12" height="3" fill="#00ff88" class="pulse"/>
     </g><g>
       <polygon points="673.8333333333334,50.5 821.1666666666667,50.5 831.1666666666667,60.5 831.1666666666667,95.5 683.8333333333334,95.5 673.8333333333334,85.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
       <text x="684.3333333333334" y="66" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_05</text>
-      <text x="684.3333333333334" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">.NET / WPF</text>
+      <text x="684.3333333333334" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">NODE.JS</text>
       
     </g><g>
       <polygon points="842.1666666666667,50.5 989.5000000000001,50.5 999.5000000000001,60.5 999.5000000000001,95.5 852.1666666666667,95.5 842.1666666666667,85.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
       <text x="852.6666666666667" y="66" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_06</text>
-      <text x="852.6666666666667" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">NODE.JS</text>
+      <text x="852.6666666666667" y="85" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">C#</text>
       
     </g><g>
       <polygon points="0.5,106.5 147.83333333333334,106.5 157.83333333333334,116.5 157.83333333333334,151.5 10.5,151.5 0.5,141.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
       <text x="11" y="122" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_07</text>
-      <text x="11" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">HTML5</text>
+      <text x="11" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">.NET / WPF</text>
       <rect x="132.33333333333334" y="112" width="12" height="3" fill="#00ff88" class="pulse"/>
     </g><g>
       <polygon points="168.83333333333334,106.5 316.1666666666667,106.5 326.1666666666667,116.5 326.1666666666667,151.5 178.83333333333334,151.5 168.83333333333334,141.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
       <text x="179.33333333333334" y="122" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_08</text>
-      <text x="179.33333333333334" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">CSS3</text>
+      <text x="179.33333333333334" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">HTML5</text>
       <rect x="300.6666666666667" y="112" width="12" height="3" fill="#00ff88" class="pulse"/>
     </g><g>
       <polygon points="337.1666666666667,106.5 484.5,106.5 494.5,116.5 494.5,151.5 347.1666666666667,151.5 337.1666666666667,141.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>
       <text x="347.6666666666667" y="122" font-size="8.5" fill="#6fcf9c" letter-spacing="1">MOD_09</text>
-      <text x="347.6666666666667" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">REST APIS</text>
+      <text x="347.6666666666667" y="141" class="d" font-size="14" letter-spacing="1.5" fill="#00ff88">CSS3</text>
       
     </g><g>
       <polygon points="505.5,106.5 652.8333333333334,106.5 662.8333333333334,116.5 662.8333333333334,151.5 515.5,151.5 505.5,141.5" fill="#03100a" stroke="#00c46a" stroke-width="1"/>

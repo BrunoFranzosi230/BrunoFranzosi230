@@ -9,5 +9,16 @@
   "node": "BRASIL // UTC-03",
   "timezone": "America/Sao_Paulo",
   "tzLabel": "BRT",
-  "stack": ["PYTHON", "TYPESCRIPT", "JAVASCRIPT", "C#", ".NET / WPF", "NODE.JS", "HTML5", "CSS3", "REST APIS", "SQL", "GIT", "PENTEST"]
+  "typing": [
+    "$ whoami",
+    "> Olá, eu sou o Bruno Franzosi!",
+    "> Desenvolvedor full stack // segurança & pentest",
+    "> Sempre aprendendo algo novo..."
+  ],
+  "stack": ["PYTHON", "TYPESCRIPT", "JAVASCRIPT", "REACT", "NODE.JS", "C#", ".NET / WPF", "HTML5", "CSS3", "SQL", "GIT", "PENTEST"],
+  "contacts": [
+    { "kind": "linkedin", "label": "LINKEDIN", "sub": "/in/bruno-franzosi", "url": "https://www.linkedin.com/in/bruno-franzosi-0655b3272/" },
+    { "kind": "gmail", "label": "GMAIL", "sub": "brunofranzosi91@gmail.com", "url": "mailto:brunofranzosi91@gmail.com" },
+    { "kind": "github", "label": "REPOSITORIES", "sub": "github.com/BrunoFranzosi230", "url": "https://github.com/BrunoFranzosi230?tab=repositories" }
+  ]
 }

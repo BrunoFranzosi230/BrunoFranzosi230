@@ -297,16 +297,89 @@ function diagnostics(d, st) {
   `);
 }
 
-// ---------- 4. atividade ----------
+// ---------- 4. atividade (gráfico + snake) ----------
+function snakeGrid(d, ox, oy) {
+  const CS = 11, ST = 15, LV = ["#0a1f14", "#0d4a2c", "#00804a", "#00c46a", "#00ff88"];
+  const days = d.days;
+  const dow0 = new Date(days[0].date + "T00:00:00Z").getUTCDay();
+  const max = Math.max(1, ...days.map((x) => x.contributionCount));
+  const cells = days.map((x, i) => {
+    const c = x.contributionCount;
+    return { col: Math.floor((i + dow0) / 7), row: (i + dow0) % 7, c, lv: c === 0 ? 0 : Math.min(4, Math.max(1, Math.ceil((c / max) * 4))), date: x.date };
+  });
+  const cols = cells[cells.length - 1].col + 1;
+  const cxp = (col) => ox + col * ST + CS / 2, cyp = (row) => oy + row * ST + CS / 2;
+
+  // rota gulosa: sempre o commit mais próximo (distância Manhattan)
+  let cur = { col: -3, row: 3 };
+  const left = cells.filter((x) => x.c > 0);
+  const pts = [[cxp(cur.col), cyp(cur.row)]];
+  let dist = 0;
+  const eatAt = new Map();
+  while (left.length) {
+    let bi = 0, bd = Infinity;
+    left.forEach((t, i) => { const dd = Math.abs(t.col - cur.col) + Math.abs(t.row - cur.row); if (dd < bd) { bd = dd; bi = i; } });
+    const t = left.splice(bi, 1)[0];
+    if (t.col !== cur.col) pts.push([cxp(t.col), cyp(cur.row)]);
+    if (t.row !== cur.row) pts.push([cxp(t.col), cyp(t.row)]);
+    dist += bd * ST;
+    eatAt.set(t, dist);
+    cur = t;
+  }
+  // sai pela direita
+  pts.push([cxp(cols + 3), cyp(cur.row)]);
+  dist += (cols + 3 - cur.col) * ST;
+  const total = Math.max(dist, 1);
+  const SPEED = 150; // px/s
+  const D = Math.max(12, total / SPEED);
+  const path = "M" + pts.map(([a, b]) => `${a.toFixed(1)},${b.toFixed(1)}`).join(" L");
+
+  const rects = cells.map((x) => {
+    const r = `x="${ox + x.col * ST}" y="${oy + x.row * ST}" width="${CS}" height="${CS}" rx="1.5"`;
+    if (!x.c) return `<rect ${r} fill="${LV[0]}"/>`;
+    const k = (eatAt.get(x) / total).toFixed(4);
+    return `<rect ${r} fill="${LV[x.lv]}"><title>${x.date}: ${x.c}</title><animate attributeName="fill" values="${LV[x.lv]};${LV[0]}" keyTimes="0;${k}" calcMode="discrete" dur="${D.toFixed(2)}s" repeatCount="indefinite"/></rect>`;
+  }).join("");
+
+  const SEG = 7, dt = ST / SPEED;
+  let snake = "";
+  for (let k = SEG - 1; k >= 0; k--) {
+    const sz = k === 0 ? CS + 1 : CS - 1 - k * 0.6;
+    const col = k === 0 ? C.hi : C.g;
+    snake += `<rect x="${-sz / 2}" y="${-sz / 2}" width="${sz}" height="${sz}" rx="2" fill="${col}" opacity="${(1 - k * 0.09).toFixed(2)}" filter="url(#softglow)">
+      <animateMotion path="${path}" dur="${D.toFixed(2)}s" begin="${(k * dt - D).toFixed(2)}s" repeatCount="indefinite" calcMode="paced"/></rect>`;
+  }
+
+  // rótulos de mês e dia
+  const mNames = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+  let months = "", lastM = -1;
+  cells.forEach((x) => {
+    const m = +x.date.slice(5, 7) - 1;
+    if (x.row === 0 && m !== lastM && x.col < cols - 2) { lastM = m; months += `<text x="${ox + x.col * ST}" y="${oy - 8}" font-size="9" fill="${C.txt}">${mNames[m]}</text>`; }
+  });
+  const wd = [[1, "SEG"], [3, "QUA"], [5, "SEX"]].map(([r, t]) => `<text x="${ox - 8}" y="${cyp(r) + 3}" text-anchor="end" font-size="9" fill="${C.txt}">${t}</text>`).join("");
+  const legend = LV.map((c, i) => `<rect x="${ox + cols * ST - 5 * ST + i * ST - 4}" y="${oy + 7 * ST + 8}" width="${CS}" height="${CS}" rx="1.5" fill="${c}"/>`).join("");
+  const w = cols * ST;
+  return {
+    width: w,
+    svg: `${months}${wd}
+    <clipPath id="snk"><rect x="${ox - 4}" y="${oy - 4}" width="${w + 8}" height="${7 * ST + 8}"/></clipPath>
+    ${rects}<g clip-path="url(#snk)">${snake}</g>
+    <text x="${ox + cols * ST - 5 * ST - 12}" y="${oy + 7 * ST + 17}" text-anchor="end" font-size="9" fill="${C.txt}">MENOS</text>${legend}
+    <text x="${ox + cols * ST + 6}" y="${oy + 7 * ST + 17}" font-size="9" fill="${C.txt}">MAIS</text>
+    <text x="${ox}" y="${oy + 7 * ST + 17}" font-size="9" fill="${C.g2}" letter-spacing="1">SNAKE.EXE <tspan fill="${C.txt}">// ${d.contributions} COMMITS DEVORADOS NO ÚLTIMO ANO</tspan></text>`,
+  };
+}
+
 function activity(d) {
-  const W = 1000, H = 290;
+  const W = 1000, H = 490;
   const days = d.days.slice(-31);
   const vals = days.map((x) => x.contributionCount);
   const total = vals.reduce((a, b) => a + b, 0);
   const peak = Math.max(...vals, 0);
   const st = streaks(d.days);
   const yMax = Math.max(4, Math.ceil(peak / 4) * 4);
-  const cx = 54, cy = 66, cw = W - cx - 30, chh = 168;
+  const cx = 54, cy = 66, cw = W - cx - 30, chh = 160;
   const X = (i) => cx + (i / (days.length - 1)) * cw;
   const Y = (v) => cy + chh - (v / yMax) * chh;
 
@@ -329,6 +402,10 @@ function activity(d) {
   const area = `${line} L${X(days.length - 1)},${Y(0)} L${X(0)},${Y(0)} Z`;
   const dots = vals.map((v, i) => v > 0 ? `<rect x="${X(i) - 2.5}" y="${Y(v) - 2.5}" width="5" height="5" fill="${v === peak ? C.hi : C.g}"/>` : "").join("");
 
+  const sy = 282; // início da seção snake
+  const gridW = 54 * 15;
+  const snk = snakeGrid(d, (W - gridW) / 2 + 10, sy + 56);
+
   return svg(W, H, `
   <defs><linearGradient id="ar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.g}" stop-opacity=".35"/><stop offset="1" stop-color="${C.g}" stop-opacity="0"/></linearGradient></defs>
   <polygon points="${chamfer(1, 1, W - 2, H - 2, 16, "tl br")}" fill="${C.panel}" stroke="${C.g2}" stroke-width="1.2"/>
@@ -341,7 +418,88 @@ function activity(d) {
   <path d="${line}" fill="none" stroke="${C.g}" stroke-width="2" stroke-linejoin="round" filter="url(#softglow)"/>
   ${dots}
   <rect x="${cx}" y="${cy}" width="2" height="${chh}" fill="${C.g}" opacity=".25" style="animation:scanx 6s linear infinite"/>
+
+  <line x1="22" y1="${sy}" x2="${W - 22}" y2="${sy}" stroke="${C.line}" stroke-dasharray="3 3"/>
+  <text x="22" y="${sy + 26}" class="d" font-size="15" letter-spacing="2" fill="${C.g}" filter="url(#softglow)">COMMIT GRID <tspan font-family="${FONT}" font-size="10.5" font-weight="400" fill="${C.g2}" letter-spacing="1">// LAST 12 MONTHS</tspan></text>
+  <text x="${W - 22}" y="${sy + 24}" text-anchor="end" font-size="10.5" letter-spacing="1.2" fill="${C.g}">PROC <tspan fill="${C.hi}">SNAKE.EXE</tspan> <tspan fill="${C.g2}">::</tspan> <tspan fill="${C.hi}" class="blink">RUNNING</tspan></text>
+  ${snk.svg}
   `, `@keyframes scanx{0%{transform:translateX(0)}100%{transform:translateX(${cw}px)}}`);
+}
+
+// ---------- 5. whoami (terminal com digitação) ----------
+function whoami() {
+  const W = 1000, H = 200, cw = 9.2, fs = 15;
+  const lines = cfg.typing;
+  const x0 = 46, y0 = 92, lh = 26;
+  const CHAR_T = 0.06, GAP = 0.5, HOLD = 3;
+  let t = 0;
+  const seq = lines.map((l) => { const s = t; t += l.length * CHAR_T + GAP; return { l, s }; });
+  const D = t + HOLD;
+  let body = "";
+  seq.forEach(({ l, s }, i) => {
+    const n = [...l].length, y = y0 + i * lh;
+    const vals = [0], kt = [0];
+    for (let c = 1; c <= n; c++) { vals.push(c * cw); kt.push((s + c * CHAR_T) / D); }
+    vals.push(0); kt.push((D - 0.01) / D);
+    if (s > 0) { vals.splice(1, 0, 0); kt.splice(1, 0, s / D); }
+    body += `<clipPath id="tc${i}"><rect x="${x0}" y="${y - 16}" height="22" width="${n * cw + 2}">
+      <animate attributeName="width" values="${vals.join(";")}" keyTimes="${kt.map((k) => k.toFixed(4)).join(";")}" calcMode="discrete" dur="${D.toFixed(2)}s" repeatCount="indefinite"/></rect></clipPath>
+      <text x="${x0}" y="${y}" font-size="${fs}" textLength="${n * cw}" lengthAdjust="spacing" fill="${i === 0 ? C.g2 : i === 1 ? C.hi : C.g}" clip-path="url(#tc${i})">${esc(l)}</text>`;
+    // cursor
+    const cx = [x0], ckt = [0];
+    if (s > 0) { cx.push(x0); ckt.push(s / D); }
+    for (let c = 1; c <= n; c++) { cx.push(x0 + c * cw); ckt.push((s + c * CHAR_T) / D); }
+    const end = i === seq.length - 1 ? (D - 0.01) / D : (s + n * CHAR_T + GAP) / D;
+    body += `<rect y="${y - 13}" width="9" height="16" fill="${C.g}" opacity="0">
+      <animate attributeName="x" values="${cx.join(";")}" keyTimes="${ckt.map((k) => k.toFixed(4)).join(";")}" calcMode="discrete" dur="${D.toFixed(2)}s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" keyTimes="0;${(s / D).toFixed(4)};${end.toFixed(4)}" calcMode="discrete" dur="${D.toFixed(2)}s" repeatCount="indefinite"/></rect>`;
+  });
+  return svg(W, H, `
+  ${sectionHeader(26, "UPLINK // WHOAMI", "TTY0 // SECURE SHELL", W)}
+  <polygon points="${chamfer(0.5, 52, W - 1, H - 53, 14, "tr bl")}" fill="${C.panel}" stroke="${C.g2}" stroke-width="1.2"/>
+  <rect x="0.5" y="52" width="${W - 1}" height="${H - 53}" fill="url(#grid)"/>
+  <text x="22" y="72" font-size="9" letter-spacing="1.5" fill="${C.txt}">● ● ●  <tspan fill="${C.g2}">${esc(cfg.username.toLowerCase())}@netrunner: ~</tspan></text>
+  <rect x="24" y="${y0 - 14}" width="3" height="${lines.length * lh - 6}" fill="${C.g}" opacity=".5"/>
+  ${body}
+  `);
+}
+
+// ---------- 6. botões de contato ----------
+function button(kind, label, sub) {
+  const W = 300, H = 64;
+  const icons = {
+    linkedin: `<rect x="20" y="16" width="32" height="32" rx="3" fill="none" stroke="${C.g}" stroke-width="2"/>
+      <text x="36" y="40" text-anchor="middle" font-size="18" font-weight="700" fill="${C.g}" style="font-family:Arial,sans-serif">in</text>`,
+    gmail: `<rect x="18" y="19" width="36" height="26" rx="2" fill="none" stroke="${C.g}" stroke-width="2"/>
+      <path d="M19 21 L36 34 L53 21" fill="none" stroke="${C.g}" stroke-width="2"/>`,
+    github: `<circle cx="36" cy="32" r="15" fill="none" stroke="${C.g}" stroke-width="2"/>
+      <text x="36" y="37" text-anchor="middle" font-size="13" font-weight="700" fill="${C.g}">&lt;/&gt;</text>`,
+  };
+  return svg(W, H, `
+  <polygon points="${chamfer(1, 1, W - 2, H - 2, 14, "tl br")}" fill="${C.panel}" stroke="${C.g}" stroke-width="1.5"/>
+  <polygon points="${chamfer(5, 5, W - 10, H - 10, 11, "tl br")}" fill="none" stroke="${C.dim}"/>
+  <rect x="1" y="1" width="${W - 2}" height="${H - 2}" fill="url(#hstripe)" opacity=".05"/>
+  <g filter="url(#softglow)">${icons[kind]}</g>
+  <line x1="68" y1="14" x2="68" y2="50" stroke="${C.line}"/>
+  <text x="82" y="30" class="d" font-size="16" letter-spacing="2.5" fill="${C.g}">${esc(label)}</text>
+  <text x="82" y="47" font-size="10" letter-spacing=".8" fill="${C.txt}">${esc(sub)}</text>
+  <text x="${W - 22}" y="38" text-anchor="end" font-size="16" fill="${C.g}" class="pulse">&gt;&gt;</text>
+  `);
+}
+
+function commsHeader() {
+  const W = 1000;
+  return svg(W, 44, sectionHeader(26, "COMM LINKS", "OPEN CHANNEL // ENCRYPTED", W));
+}
+
+function footer() {
+  const W = 1000, H = 50;
+  return svg(W, H, `
+  <line x1="0" y1="10" x2="${W}" y2="10" stroke="${C.line}"/>
+  <rect x="0" y="8" width="120" height="4" fill="${C.g}"/>
+  <rect x="${W - 120}" y="8" width="120" height="4" fill="${C.g}"/>
+  <text x="${W / 2}" y="36" text-anchor="middle" font-size="11" letter-spacing="3" fill="${C.g2}">// END OF TRANSMISSION — CONNECTION KEPT ALIVE <tspan class="blink" fill="${C.g}">█</tspan></text>
+  `);
 }
 
 // ---------- run ----------
@@ -351,4 +509,8 @@ writeFileSync(join(OUT, "banner.svg"), banner());
 writeFileSync(join(OUT, "stack.svg"), stack());
 writeFileSync(join(OUT, "diagnostics.svg"), diagnostics(data, st));
 writeFileSync(join(OUT, "activity.svg"), activity(data));
+writeFileSync(join(OUT, "whoami.svg"), whoami());
+writeFileSync(join(OUT, "comms.svg"), commsHeader());
+writeFileSync(join(OUT, "footer.svg"), footer());
+for (const c of cfg.contacts) writeFileSync(join(OUT, `link-${c.kind}.svg`), button(c.kind, c.label, c.sub));
 console.log("SVGs gerados em assets/", process.env.GH_TOKEN || process.env.GITHUB_TOKEN ? "(dados reais)" : "(dados de exemplo)");
