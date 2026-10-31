@@ -11,14 +11,14 @@ mkdirSync(OUT, { recursive: true });
 
 // ---------- paleta ----------
 const C = {
-  bg: "#020805",
-  panel: "#03100a",
-  g: "#00ff88",       // verde neon
-  g2: "#00c46a",
-  dim: "#0d4a2c",
-  line: "#0f6b3e",
-  txt: "#6fcf9c",
-  hi: "#d6ffea",      // destaque (RUNNING / OPEN / GRANTED)
+  bg: "#02070a",
+  panel: "#031216",
+  g: "#00f0ff",       // ciano neon
+  g2: "#00b8d4",
+  dim: "#0b3f4a",
+  line: "#0e5e6e",
+  txt: "#6cc8d6",
+  hi: "#d9fbff",      // destaque (RUNNING / OPEN / GRANTED)
 };
 const FONT = `'JetBrains Mono','Share Tech Mono','Consolas','Courier New',monospace`;
 const DISPLAY = `'Orbitron','Rajdhani','Bahnschrift','Arial Narrow','Consolas',monospace`;
@@ -299,7 +299,7 @@ function diagnostics(d, st) {
 
 // ---------- 4. atividade (gráfico + snake) ----------
 function snakeGrid(d, ox, oy) {
-  const CS = 11, ST = 15, LV = ["#0a1f14", "#0d4a2c", "#00804a", "#00c46a", "#00ff88"];
+  const CS = 11, ST = 15, LV = ["#0a1a1f", "#0b3f4a", "#007f99", "#00b8d4", "#00f0ff"];
   const days = d.days;
   const dow0 = new Date(days[0].date + "T00:00:00Z").getUTCDay();
   const max = Math.max(1, ...days.map((x) => x.contributionCount));
