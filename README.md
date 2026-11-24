@@ -20,11 +20,11 @@
 
 <br/><br/>
 
-<img src="./assets/diagnostics-adcb98d0.svg" width="100%" alt="System diagnostics" />
+<img src="./assets/diagnostics-25300685.svg" width="100%" alt="System diagnostics" />
 
 <br/><br/>
 
-<img src="./assets/activity-3444781d.svg" width="100%" alt="Neural activity + snake de commits" />
+<img src="./assets/activity-b6e7934d.svg" width="100%" alt="Neural activity + snake de commits" />
 
 <br/>
 
